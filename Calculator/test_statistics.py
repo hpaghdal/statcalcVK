@@ -2,7 +2,7 @@ import unittest
 #from Calculator.Calculator import Calculator
 from Calculator import Calculator
 #from CsvReader.CsvReader import CsvReader
-#import pprint
+import pprint
 
 
 class MyTestCase(unittest.TestCase):
@@ -17,6 +17,10 @@ class MyTestCase(unittest.TestCase):
         ##for row in test_data:
         data = [1,2,3,4,5]
         self.assertEqual(self.calculator.popmean(data), 3)
+
+    def test_sd_calculator(self):
+        data = [1, 2, 3, 4, 5]
+        self.assertEqual(self.calculator.stdev(data), 1.5811388300841898)
 
 
 if __name__ == '__main__':
