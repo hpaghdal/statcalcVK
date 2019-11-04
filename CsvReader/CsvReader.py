@@ -1,5 +1,5 @@
 import csv
-from pprint import pprint
+
 
 
 class CsvReader:
@@ -15,10 +15,10 @@ class CsvReader:
 
 
 
-#  def return_data_as_objects(selfself, class_name):
-#      objects = []
-#      for row in self.data:
-#           objects.append(Class)
-#           self.csv_data = csv.DictReader(text_data, delimiter=',')
-#       pprint(self.csv_data)
-#     pass
+  def return_data_as_objects(selfself, class_name):
+      objects = []
+      for row in self.data:
+           objects.append(Class)
+           self.csv_data = csv.DictReader(text_data, delimiter=',')
+#      pprint(self.csv_data)
+     pass
