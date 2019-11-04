@@ -1,15 +1,21 @@
 import math
 
-n = 100 #sample size
-def confidenceinterval(mean, sd, confidence):
-    #confidence =[90,95,99] #for sample size 100
-    t_value =[1.66,1.984,2.626]
-    standard_error =  sd/(math.sqrt(n))
-    confidence_lower = []
-    confidence_upper = []
-    for i in len(t_value):
-        conf_low = mean - t_value*standard_error
-        confidence_lower.append(conf_low)
-        conf_up = mean + t_value*standard_error
-        confidence_upper.append(conf_up)
-    print(confidence_lower,confidence_upper)
+from PopulationMean import mean
+from StandardDeviation import st_dev
+def confidenceinterval(lst,conf):
+    x = mean(lst)
+    std= st_dev(lst)
+    if conf == 95:
+        t = 1.96
+    elif conf == 90:
+        t = 1.64
+    elif conf == 99:
+        t = 2.58
+    else:                   #95 default confidence percentage
+        t = 1.96
+    std_error = std/(math.sqrt(len(lst)))
+    conf_upper = x + t*std_error
+    conf_upper = round(conf_upper,2)
+    conf_lower = x - t*std_error
+    conf_lower = round(conf_lower, 2)
+    return conf_upper,conf_lower
