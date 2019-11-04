@@ -1,4 +1,4 @@
-from Mean import mean
+from PopulationMean import mean
 from Median import median
 from Mode import mode
 
