@@ -1,6 +1,7 @@
-from Mean import mean
+from PopulationMean import mean
+from Median import median
+from Mode import mode
 
-from StandardDeviation import st_dev
 
 class Calculator:
     result = 0
@@ -12,6 +13,10 @@ class Calculator:
         self.result = mean(a)
         return self.result
 
-    def stdev(self, a):
-        self.result = st_dev(a)
+    def med(self, a):
+        self.result = median(a)
+        return self.result
+
+    def mod(self, a):
+        self.result = mode(a)
         return self.result
