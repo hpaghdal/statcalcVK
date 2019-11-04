@@ -24,6 +24,12 @@ class MyTestCase(unittest.TestCase):
         data = [1,2,3,4,5,6]
         self.assertEqual(self.calculator.med(data), 3.5)
 
+    def test_mode_calculator(self):
+        ##test_data = CsvReader('/Tests/Data/Addition.csv').data
+        ##for row in test_data:
+        data = [1,2,3,4,5,6,3]
+        self.assertEqual(self.calculator.mod(data), 3)
+
 
 if __name__ == '__main__':
     unittest.main()

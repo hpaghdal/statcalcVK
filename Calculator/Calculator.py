@@ -1,5 +1,6 @@
 from Mean import mean
 from Median import median
+from Mode import mode
 
 
 class Calculator:
@@ -14,4 +15,8 @@ class Calculator:
 
     def med(self, a):
         self.result = median(a)
+        return self.result
+
+    def mod(self, a):
+        self.result = mode(a)
         return self.result
