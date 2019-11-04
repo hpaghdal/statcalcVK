@@ -1,4 +1,5 @@
 from Mean import mean
+from Median import median
 
 
 class Calculator:
@@ -9,4 +10,8 @@ class Calculator:
 
     def popmean(self, a):
         self.result = mean(a)
+        return self.result
+
+    def med(self, a):
+        self.result = median(a)
         return self.result
