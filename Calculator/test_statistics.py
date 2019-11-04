@@ -30,6 +30,9 @@ class MyTestCase(unittest.TestCase):
         data = [1,2,3,4,5,6,3]
         self.assertEqual(self.calculator.mod(data), 3)
 
+    def test_standard_deviation_calculator(self):
+        data = [1,2,3,4,5]
+        self.assertEqual(self.calculator.stddev(data),1.5811388300841898)
 
 
 if __name__ == '__main__':

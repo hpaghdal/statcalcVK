@@ -1,6 +1,6 @@
 import math
 
-from Mean import mean
+from PopulationMean import mean
 
 def st_dev(lst):
     sum = 0
