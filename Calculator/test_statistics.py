@@ -37,7 +37,7 @@ class MyTestCase(unittest.TestCase):
     def test_confidence_interval_calculator(self):
         data = [1,2,3,4,5]
         conf = 95
-        self.assertEqual(self.calculator.confintv(data,conf),4.39)
+        self.assertEqual(self.calculator.confintv(data,conf),(4.39,1.61))
 
 if __name__ == '__main__':
     unittest.main()

@@ -16,5 +16,6 @@ def confidenceinterval(lst,conf):
     std_error = std/(math.sqrt(len(lst)))
     conf_upper = x + t*std_error
     conf_upper = round(conf_upper,2)
-    #conf_lower = x - t*std_error
-    return conf_upper#,conf_lower
+    conf_lower = x - t*std_error
+    conf_lower = round(conf_lower, 2)
+    return conf_upper,conf_lower
