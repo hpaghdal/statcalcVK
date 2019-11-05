@@ -1,3 +1,6 @@
-def square(a):
-    a = int(a)
-    return a ** 2
+from StandardDeviation import st_dev
+
+
+def pop_variance(lst):
+    s = st_dev(lst)
+    return s ** 2

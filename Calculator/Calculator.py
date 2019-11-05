@@ -3,6 +3,8 @@ from Median import median
 from Mode import mode
 from StandardDeviation import st_dev
 from ConfidenceInterval import confidenceinterval
+from Zscore import zscore
+from PopulationVariance import pop_variance
 
 
 class Calculator:
@@ -31,6 +33,10 @@ class Calculator:
         self.result = confidenceinterval(a, b)
         return self.result
 
-    def z_score(self, a, b):
+    def z_score(self, a):
         self.result = zscore(a)
+        return self.result
+
+    def pvariance(self, a):
+        self.result = pop_variance(a)
         return self.result
