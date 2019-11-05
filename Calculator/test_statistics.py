@@ -2,6 +2,7 @@ import unittest
 from Calculator import Calculator
 from CsvReader.CsvReader import CsvReader
 
+
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.calculator = Calculator()
@@ -9,14 +10,14 @@ class MyTestCase(unittest.TestCase):
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.calculator, Calculator)
 
-
     def test_mean_calculator(self):
-        #test_data = CsvReader('/Tests/Data/meantest.csv').data
-        #for row in test_data:
-        data = [1, 2, 3, 4, 5]
-        self.assertEqual(self.calculator.popmean(data), 3)
-            #self.assertEqual(self.calculator.popmean(row['Value 1']), 16.5)
-            #self.assertEqual(self.calculator.popmean(x), int(16.5))
+        test_data = CsvReader('/Tests/Data/meantest.csv').data
+        for row in test_data:
+            #Result = int(16.5)
+            # data = [1, 2, 3, 4, 5]
+            # self.assertEqual(self.calculator.popmean(data), 3)
+            self.assertEqual(self.calculator.popmean(row['Value 1']), '16.5')
+            # self.assertEqual(self.calculator.popmean(x), int(16.5))
 
     def test_median_calculator(self):
         ##test_data = CsvReader('/Tests/Data/Addition.csv').data
@@ -33,6 +34,10 @@ class MyTestCase(unittest.TestCase):
     def test_standard_deviation_calculator(self):
         data = [1, 2, 3, 4, 5]
         self.assertEqual(self.calculator.stddev(data), 1.5811388300841898)
+
+    # def test_sample_standard_deviation_calculator(self):
+    #    data = [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    #    self.assertEqual(self.calculator.sampstdev(data), 1.5811388300841898)
 
     def test_confidence_interval_calculator(self):
         data = [1, 2, 3, 4, 5]
