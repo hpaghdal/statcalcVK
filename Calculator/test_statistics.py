@@ -34,6 +34,10 @@ class MyTestCase(unittest.TestCase):
         data = [1, 2, 3, 4, 5]
         self.assertEqual(self.calculator.stddev(data), 1.5811388300841898)
 
+    #def test_sample_standard_deviation_calculator(self):
+    #    data = [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    #    self.assertEqual(self.calculator.sampstdev(data), 1.5811388300841898)
+
     def test_confidence_interval_calculator(self):
         data = [1, 2, 3, 4, 5]
         conf = 95

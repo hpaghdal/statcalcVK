@@ -5,6 +5,7 @@ from StandardDeviation import st_dev
 from ConfidenceInterval import confidenceinterval
 from Zscore import zscore
 from PopulationVariance import pop_variance
+from SampleStandardDeviation import sampst_dev
 
 
 class Calculator:
@@ -27,6 +28,10 @@ class Calculator:
 
     def stddev(self, a):
         self.result = st_dev(a)
+        return self.result
+
+    def sampstdev(self, a):
+        self.result = sampst_dev(a)
         return self.result
 
     def confintv(self, a, b):
