@@ -3,6 +3,8 @@ from Median import median
 from Mode import mode
 from StandardDeviation import st_dev
 from ConfidenceInterval import confidenceinterval
+
+
 class Calculator:
     result = 0
 
@@ -25,6 +27,10 @@ class Calculator:
         self.result = st_dev(a)
         return self.result
 
-    def confintv(self,a,b):
-        self.result = confidenceinterval(a,b)
+    def confintv(self, a, b):
+        self.result = confidenceinterval(a, b)
+        return self.result
+
+    def z_score(self, a, b):
+        self.result = zscore(a)
         return self.result
