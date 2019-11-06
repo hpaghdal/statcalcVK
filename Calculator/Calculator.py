@@ -6,7 +6,7 @@ from ConfidenceInterval import confidenceinterval
 from Zscore import zscore
 from PopulationVariance import pop_variance
 from SampleStandardDeviation import sampst_dev
-
+from SampleMean import samp_mean
 
 class Calculator:
     result = 0
@@ -16,6 +16,10 @@ class Calculator:
 
     def popmean(self, a):
         self.result = mean(a)
+        return self.result
+
+    def sammean(self, a):
+        self.result = samp_mean(a)
         return self.result
 
     def med(self, a):

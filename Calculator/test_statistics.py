@@ -18,6 +18,10 @@ class MyTestCase(unittest.TestCase):
             #self.assertEqual(self.calculator.popmean(row['Value 1']), 16.5)
             #self.assertEqual(self.calculator.popmean(x), int(16.5))
 
+    def test_sample_mean_calculator(self):
+        data = [1, 2, 3, 4, 5,6,7,8,9,10]
+        self.assertEqual(self.calculator.sammean(data), 3)
+
     def test_median_calculator(self):
         ##test_data = CsvReader('/Tests/Data/Addition.csv').data
         ##for row in test_data:
