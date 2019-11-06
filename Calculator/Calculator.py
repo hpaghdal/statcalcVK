@@ -7,11 +7,14 @@ from Zscore import zscore
 from PopulationVariance import pop_variance
 from SampleStandardDeviation import sampst_dev
 from SampleMean import samp_mean
+
+
 class Calculator:
     result = 0
 
     def __init__(self):
         pass
+
     def popmean(self, a):
         self.result = mean(a)
         return self.result
