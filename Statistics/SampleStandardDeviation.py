@@ -1,6 +1,6 @@
 import math
 
-from PopulationMean import mean
+from Statistics.PopulationMean import mean
 
 def sampst_dev(lst):
     sum,new_sum = 0,0

@@ -1,4 +1,5 @@
-from PopulationMean import mean
+from Statistics.PopulationMean import mean
+
 
 def samp_mean(lst):
     new_list = []
