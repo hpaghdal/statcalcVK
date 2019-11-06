@@ -6,7 +6,6 @@ from ConfidenceInterval import confidenceinterval
 from Zscore import zscore
 from PopulationVariance import pop_variance
 
-
 class Calculator:
     result = 0
 
