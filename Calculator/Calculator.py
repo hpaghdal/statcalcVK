@@ -1,12 +1,9 @@
-from PopulationMean import mean
-from Median import median
-from Mode import mode
-from StandardDeviation import st_dev
-from ConfidenceInterval import confidenceinterval
-from Zscore import zscore
-from PopulationVariance import pop_variance
-from SampleStandardDeviation import sampst_dev
-from SampleMean import samp_mean
+from Calculator.Addition import addition
+from Calculator.Subtraction import subtraction
+from Calculator.Division import division
+from Calculator.Multiplication import multiplication
+from Calculator.Square import square
+from Calculator.Sqrt import root
 
 
 class Calculator:
@@ -15,38 +12,26 @@ class Calculator:
     def __init__(self):
         pass
 
-    def popmean(self, a):
-        self.result = mean(a)
+    def add(self, a, b):
+        self.result = addition(a, b)
         return self.result
 
-    def sammean(self, a):
-        self.result = samp_mean(a)
+    def subtract(self, a, b):
+        self.result = subtraction(a, b)
         return self.result
 
-    def med(self, a):
-        self.result = median(a)
+    def multiply(self, a, b):
+        self.result = multiplication(a, b)
         return self.result
 
-    def mod(self, a):
-        self.result = mode(a)
+    def divide(self, a, b):
+        self.result = round(division(a, b), 7)
         return self.result
 
-    def stddev(self, a):
-        self.result = st_dev(a)
+    def square(self, a):
+        self.result = square(a)
         return self.result
 
-    def sampstdev(self, a):
-        self.result = sampst_dev(a)
-        return self.result
-
-    def confintv(self, a, b):
-        self.result = confidenceinterval(a, b)
-        return self.result
-
-    def z_score(self, a):
-        self.result = zscore(a)
-        return self.result
-
-    def pvariance(self, a):
-        self.result = pop_variance(a)
+    def sqrt(self, a):
+        self.result = root(a)
         return self.result
