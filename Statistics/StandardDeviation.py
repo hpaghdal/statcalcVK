@@ -1,6 +1,6 @@
 import math
 
-from PopulationMean import mean
+from Statistics.PopulationMean import mean
 
 
 def st_dev(lst):

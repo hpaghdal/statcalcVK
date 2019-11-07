@@ -1,4 +1,4 @@
-from StandardDeviation import st_dev
+from Statistics.StandardDeviation import st_dev
 
 
 def pop_variance(lst):
