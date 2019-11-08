@@ -3,6 +3,7 @@ from Statistics.Statistics import Statistics
 from Calculator.Calculator import Calculator
 from CsvReader.CsvReader import CsvReader
 from pprint import pprint
+import statistics
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
@@ -44,9 +45,25 @@ class MyTestCase(unittest.TestCase):
         data = [1, 2, 3, 4, 5]
         self.assertEqual(self.statistics.stddev(data), 1.5811388300841898)
 
+#-------------------------------------------------------------------------------------
+
     def test_sample_standard_deviation_calculator(self):
-        data = [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-        self.assertEqual(self.statistics.sampstdev(data), 1.5811388300841898)
+
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        lst = []
+        z =[]
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        x, z = self.statistics.sampstdev(lst)
+        z = statistics.stdev(lst)
+        #x = self.statistics.sampstdev()
+            # for column in answer:
+            # result = float((column['mean']))
+        self.assertEqual(x,z)
+        #self.assertEqual(self.statistics.newmean(lst), 72.94494494494495)
+
+#---------------------------------------------------------------------------------------
 
     def test_confidence_interval_calculator(self):
         data = [1, 2, 3, 4, 5]
