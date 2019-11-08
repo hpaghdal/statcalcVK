@@ -69,7 +69,7 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
             y = int(row['Value 1'])
             lst.append(y)
-        for column in answer:
+        #for column in answer:
             #result = float((column['mean']))
         self.assertEqual(self.statistics.newmean(lst), 72.94494494494495)
 
