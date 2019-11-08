@@ -14,17 +14,20 @@ from Statistics.MeanTest import newmean
 class Statistics(Calculator):
     data = []
 
-    def __init__(self):
-
+    def __init__(self, filepath):
+        self.data = CsvReader('Tests/Data/UnitTestStats.csv').data
         super().__init__()
+
+
 
     #def __init__(self, filepath):
         #self.data = CsvReader(filepath)
         #super().__init__()
 
-    def newmean(self):
-        self.result = newmean(self.data)
+    def newmean(self, a):
+        self.result = newmean(a)
         return self.result
+
 
     def popmean(self, a):
         self.result = mean(a)

@@ -2,11 +2,13 @@ import unittest
 from Statistics.Statistics import Statistics
 from Calculator.Calculator import Calculator
 from CsvReader.CsvReader import CsvReader
-
+from pprint import pprint
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.statistics = Statistics()
+        self.statistics = Statistics('Tests/Data/UnitTestStats.csv')
+
+
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
@@ -15,7 +17,7 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.statistics, Statistics)
 
     def test_mean_calculator(self):
-        # test_data = CsvReader('/Tests/Data/meantest.csv').data
+        # test_data = CsvReader('/Tests/Data/UnitTestStatsAnswers.csv').data
         # for row in test_data:
         data = [1, 2, 3, 4, 5]
         self.assertEqual(self.statistics.popmean(data), 3)
@@ -59,6 +61,16 @@ class MyTestCase(unittest.TestCase):
         data = [1, 2, 3, 4, 5]
         self.assertEqual(self.statistics.pvariance(data), 2.5000000000000004)
 
+
+    def test_new_mean_statistics(self):
+        test_data = CsvReader('Tests/Data/UnitTestStats.csv').data
+        lst =[]
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        x = self.statistics.newmean(lst)
+
+        self.assertEqual(self.statistics.newmean(lst), 100.474)
 
 if __name__ == '__main__':
     unittest.main()
