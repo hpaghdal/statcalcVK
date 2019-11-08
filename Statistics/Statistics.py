@@ -19,11 +19,6 @@ class Statistics(Calculator):
         super().__init__()
 
 
-
-    #def __init__(self, filepath):
-        #self.data = CsvReader(filepath)
-        #super().__init__()
-
     def newmean(self, a):
         self.result = newmean(a)
         return self.result

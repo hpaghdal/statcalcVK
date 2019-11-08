@@ -63,15 +63,15 @@ class MyTestCase(unittest.TestCase):
 
 
     def test_new_mean_statistics(self):
-        test_data = CsvReader('Tests/Data/UnitTestStats.csv').data
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
         answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
         lst =[]
         for row in test_data:
             y = int(row['Value 1'])
             lst.append(y)
         for column in answer:
-            result = float((column['mean']))
-        self.assertEqual(self.statistics.newmean(lst), result)
+            #result = float((column['mean']))
+        self.assertEqual(self.statistics.newmean(lst), 72.94494494494495)
 
 if __name__ == '__main__':
     unittest.main()
