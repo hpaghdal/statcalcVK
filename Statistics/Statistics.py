@@ -8,18 +8,23 @@ from Statistics.Zscore import zscore
 from Statistics.PopulationVariance import pop_variance
 from Statistics.SampleStandardDeviation import sampst_dev
 from Statistics.SampleMean import samp_mean
+from CsvReader.CsvReader import CsvReader
+from Statistics.MeanTest import newmean
 
-
-#class Calculator:
-    #result = 0
-
-    #def __init__(self):
-        #pass
 class Statistics(Calculator):
     data = []
 
     def __init__(self):
+
         super().__init__()
+
+    #def __init__(self, filepath):
+        #self.data = CsvReader(filepath)
+        #super().__init__()
+
+    def newmean(self):
+        self.result = newmean(self.data)
+        return self.result
 
     def popmean(self, a):
         self.result = mean(a)
