@@ -1,22 +1,28 @@
 import math
+from Calculator.Addition import addition
+from Calculator.Division import division
+from Calculator.Subtraction import subtraction
+from Calculator.Square import square
+from Calculator.Sqrt import root
+from Statistics.SampleGenerator import getSample
+from Statistics.MeanTest import newmean
+import statistics
 
-from Statistics.PopulationMean import mean
+
 
 def sampst_dev(lst):
-    sum,new_sum = 0,0
-    new_list = []
-    i,j = 0,0
+    ss = 10
+    new_values = getSample(lst, ss)
+    new_mean = newmean(new_values)
+    total = 0
+    for row in new_values:
+        error = subtraction(row, new_mean)
+        error_sq = square(error)
+        total = addition(total, error_sq)
+    i = len(new_values)
+    b = division(subtraction(1,i), total)
+    std = math.sqrt(b)  #works
+    #std = root(b)      #Doesn't work
+    return std, new_values
 
-    for x in range(20):
-        new_list.append(lst)
-        new_sum+= new_list[x]
-        j += 1
-    new_mean = new_sum/j
-    for row in new_list:
-        i=i+1
-        error = row - new_mean
-        error_sq = error*error
-        sum = sum + error_sq
-    b=sum/(i-1)
-    std = math.sqrt(b)
-    return std
+

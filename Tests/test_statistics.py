@@ -6,7 +6,9 @@ from CsvReader.CsvReader import CsvReader
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.statistics = Statistics()
+        self.statistics = Statistics('Tests/Data/UnitTestStats.csv')
+
+
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
@@ -15,7 +17,7 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.statistics, Statistics)
 
     def test_mean_calculator(self):
-        # test_data = CsvReader('/Tests/Data/meantest.csv').data
+        # test_data = CsvReader('/Tests/Data/UnitTestStatsAnswers.csv').data
         # for row in test_data:
         data = [1, 2, 3, 4, 5]
         self.assertEqual(self.statistics.popmean(data), 3)
@@ -42,9 +44,24 @@ class MyTestCase(unittest.TestCase):
         data = [1, 2, 3, 4, 5]
         self.assertEqual(self.statistics.stddev(data), 1.5811388300841898)
 
-    # def test_sample_standard_deviation_calculator(self):
-    #    data = [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-    #    self.assertEqual(self.statistics.sampstdev(data), 1.5811388300841898)
+
+
+    def test_sample_standard_deviation_calculator(self):
+
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        x, z = self.statistics.sampstdev(lst)
+        x = round(x,3)
+        z = round(z,3)
+        #z = statistics.stdev(lst)
+        #x = self.statistics.sampstdev()
+
+        self.assertEqual(x,z)
+
+
 
     def test_confidence_interval_calculator(self):
         data = [1, 2, 3, 4, 5]
@@ -59,6 +76,17 @@ class MyTestCase(unittest.TestCase):
         data = [1, 2, 3, 4, 5]
         self.assertEqual(self.statistics.pvariance(data), 2.5000000000000004)
 
+
+    def test_new_mean_statistics(self):
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
+        lst =[]
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        #for column in answer:
+            #result = float((column['mean']))
+        self.assertEqual(self.statistics.newmean(lst), 72.94494494494495)
 
 if __name__ == '__main__':
     unittest.main()
