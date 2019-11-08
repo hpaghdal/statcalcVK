@@ -1,5 +1,7 @@
 import math
-
+from Calculator.Addition import addition
+from Calculator.Division import division
+from Calculator.Sqrt import root
 from Statistics.PopulationMean import mean
 
 def sampst_dev(lst):
@@ -7,8 +9,8 @@ def sampst_dev(lst):
     new_list = []
     i,j = 0,0
 
-    for x in range(20):
-        new_list.append(lst)
+    for x in range(5):
+        new_list = lst[0:5]
         new_sum+= new_list[x]
         j += 1
     new_mean = new_sum/j
