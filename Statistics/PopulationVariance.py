@@ -1,5 +1,6 @@
 from Statistics.StandardDeviation import st_dev
 from Calculator.Square import square
+from Statistics.PopulationMean import mean
 
 
 def pop_variance(lst):
