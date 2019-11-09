@@ -45,15 +45,23 @@ class MyTestCase(unittest.TestCase):
             lst.append(y)
         self.assertEqual(self.statistics.med(lst), 70)
 
-    def test_mode_calculator(self):
-        ##test_data = CsvReader('/Tests/Data/Addition.csv').data
-        ##for row in test_data:
-        data = [1, 2, 3, 4, 5, 6, 3]
-        self.assertEqual(self.statistics.mod(data), 3)
+    def test_Mode_calculator(self):
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        #answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        self.assertEqual(self.statistics.mod(lst), 70)
 
-    def test_Standard_Deviation_calculator(self):
-        data = [1, 2, 3, 4, 5]
-        self.assertEqual(self.statistics.stddev(data), 1.5811388300841898)
+    def test_Population_Standard_Deviation_calculator(self):
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        #answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        self.assertEqual(self.statistics.stddev(lst), 73.00893494041833)
 
     def test_Sample_Standard_Deviation_calculator(self):
 
