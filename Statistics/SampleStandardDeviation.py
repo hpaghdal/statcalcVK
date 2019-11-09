@@ -11,7 +11,7 @@ import random
 
 
 def sampst_dev(lst):
-    ss = random.randint(1,len(lst))
+    ss = random.randint(1, len(lst))
     new_values = getSample(lst, ss)
     new_mean = newmean(new_values)
     total = 0
@@ -20,10 +20,8 @@ def sampst_dev(lst):
         error_sq = square(error)
         total = addition(total, error_sq)
     i = len(new_values)
-    b = division(subtraction(1,i), total)
-    std = math.sqrt(b)  #works
-    #std = root(b)      
-    actual_sd = statistics.stdev(new_values) #Calculated using stat library to compare
+    b = total / (i - 1)#division(subtraction(1, i), total)
+    std = math.sqrt(b)  # works
+    # std = root(b)      #Doesn't work
+    actual_sd = statistics.stdev(new_values)
     return std, actual_sd
-
-
