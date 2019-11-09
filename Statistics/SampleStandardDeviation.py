@@ -20,7 +20,7 @@ def sampst_dev(lst):
         error_sq = square(error)
         total = addition(total, error_sq)
     i = len(new_values)
-    b = division(subtraction(1,i), total)
+    b = division(total, subtraction(1,i))
     std = math.sqrt(b)  #works
     #std = root(b)      
     actual_sd = statistics.stdev(new_values) #Calculated using stat library to compare
