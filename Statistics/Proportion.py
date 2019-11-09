@@ -1,7 +1,7 @@
 from Statistics.PopulationMean import mean
 from Calculator.Multiplication import multiplication
 from Calculator.Division import division
-
+from Calculator.Addition import addition
 
 def proportion(lst):
     m = mean(lst)
@@ -10,6 +10,6 @@ def proportion(lst):
     count = 0
     for i in lst:
         if (i > higher_limit) or (i < lower_limit):
-            count = count + 1
+            count = addition(count, 1)
     p = round(division(count, float(len(lst))), 8)
     return p

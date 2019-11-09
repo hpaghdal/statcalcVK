@@ -8,5 +8,4 @@ def zscore(lst):
     m = mean(lst)
     s = st_dev(lst)
     for z in lst:
-        #return (z - m) / s
         return division(subtraction(m, z), s)

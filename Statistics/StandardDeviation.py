@@ -1,4 +1,3 @@
-import math
 from Calculator.Addition import addition
 from Calculator.Subtraction import subtraction
 from Calculator.Division import division
@@ -12,6 +11,6 @@ def st_dev(lst):
     m = mean(lst)
     for l in lst:
         diffs = addition(diffs,square(subtraction(l, m)))
-        sd = division(diffs, subtraction(1,len(lst)))
+        sd = division(diffs, subtraction(1, len(lst)))
         x = root(sd)
     return x
