@@ -100,8 +100,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.pvariance(data), 2.499999999733769)
 
     def test_proportion_calculator(self):
-        data = [1, 2, 3, 4, 5, 6]
-        self.assertEqual(self.statistics.proportion(data), 0.6666667)
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        self.assertEqual(self.statistics.proportion(lst), 0.795)
 
 
 if __name__ == '__main__':
