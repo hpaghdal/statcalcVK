@@ -10,6 +10,7 @@ from Statistics.SampleStandardDeviation import sampst_dev
 from Statistics.SampleMean import samp_mean
 from CsvReader.CsvReader import CsvReader
 from Statistics.MeanTest import newmean
+from Statistics.Proportion import proportion
 
 
 class Statistics(Calculator):
@@ -57,4 +58,8 @@ class Statistics(Calculator):
 
     def pvariance(self, a):
         self.result = pop_variance(a)
+        return self.result
+
+    def proportion(self, a):
+        self.result = proportion(a)
         return self.result
