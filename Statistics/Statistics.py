@@ -9,7 +9,6 @@ from Statistics.PopulationVariance import pop_variance
 from Statistics.SampleStandardDeviation import sampst_dev
 from Statistics.SampleMean import samp_mean
 from CsvReader.CsvReader import CsvReader
-from Statistics.MeanTest import newmean
 from Statistics.Proportion import proportion
 
 
@@ -21,10 +20,6 @@ class Statistics(Calculator):
         super().__init__()
 
     def newmean(self, a):
-        self.result = newmean(a)
-        return self.result
-
-    def popmean(self, a):
         self.result = mean(a)
         return self.result
 
