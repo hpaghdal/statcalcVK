@@ -50,8 +50,8 @@ class MyTestCase(unittest.TestCase):
             y = int(row['Value 1'])
             lst.append(y)
         x, z = self.statistics.sampstdev(lst)
-        #x = round(x, 3)
-        #z = round(z, 3)
+        x = round(x, 3)
+        z = round(z, 3)
         # z = statistics.stdev(lst)
         # x = self.statistics.sampstdev()
 
