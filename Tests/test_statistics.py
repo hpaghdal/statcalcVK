@@ -80,7 +80,6 @@ class MyTestCase(unittest.TestCase):
         data = [1, 2, 3, 4, 5]
         self.assertEqual(self.statistics.pvariance(data), 2.5000000000000004)
 
-
     def test_proportion_calculator(self):
         data = [1, 2, 3, 4, 5, 6]
         self.assertEqual(self.statistics.med(data), 3.5)
