@@ -32,26 +32,36 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
             y = int(row['Value 1'])
             lst.append(y)
-        #pprint(test_data)
         x, z = self.statistics.sammean(lst)
 
         self.assertEqual(x, z)
 
-    def test_median_calculator(self):
-        ##test_data = CsvReader('/Tests/Data/Addition.csv').data
-        ##for row in test_data:
-        data = [1, 2, 3, 4, 5, 6]
-        self.assertEqual(self.statistics.med(data), 3.5)
+    def test_Median_calculator(self):
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        #answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        self.assertEqual(self.statistics.med(lst), 70)
 
-    def test_mode_calculator(self):
-        ##test_data = CsvReader('/Tests/Data/Addition.csv').data
-        ##for row in test_data:
-        data = [1, 2, 3, 4, 5, 6, 3]
-        self.assertEqual(self.statistics.mod(data), 3)
+    def test_Mode_calculator(self):
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        #answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        self.assertEqual(self.statistics.mod(lst), 70)
 
-    def test_Standard_Deviation_calculator(self):
-        data = [1, 2, 3, 4, 5]
-        self.assertEqual(self.statistics.stddev(data), 1.5811388300841898)
+    def test_Population_Standard_Deviation_calculator(self):
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        #answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        self.assertEqual(self.statistics.stddev(lst), 73.00893494041833)
 
     def test_Sample_Standard_Deviation_calculator(self):
 
@@ -67,9 +77,13 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(x, z)
 
     def test_confidence_interval_calculator(self):
-        data = [1, 2, 3, 4, 5]
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
         conf = 95
-        self.assertEqual(self.statistics.confintv(data, conf), (4.39, 1.61))
+        self.assertEqual(self.statistics.confintv(lst, conf), (77.47, 68.42))
 
     def test_zscore_calculator(self):
         data = [1, 2, 3, 4, 5]
