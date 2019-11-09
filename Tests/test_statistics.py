@@ -32,16 +32,18 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
             y = int(row['Value 1'])
             lst.append(y)
-        #pprint(test_data)
         x, z = self.statistics.sammean(lst)
 
         self.assertEqual(x, z)
 
-    def test_median_calculator(self):
-        ##test_data = CsvReader('/Tests/Data/Addition.csv').data
-        ##for row in test_data:
-        data = [1, 2, 3, 4, 5, 6]
-        self.assertEqual(self.statistics.med(data), 3.5)
+    def test_Median_calculator(self):
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        #answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        self.assertEqual(self.statistics.med(lst), 70)
 
     def test_mode_calculator(self):
         ##test_data = CsvReader('/Tests/Data/Addition.csv').data
