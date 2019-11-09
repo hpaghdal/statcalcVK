@@ -5,7 +5,7 @@ from Calculator.Subtraction import subtraction
 from Calculator.Square import square
 from Calculator.Sqrt import root
 from Statistics.SampleGenerator import getSample
-from Statistics.MeanTest import newmean
+from Statistics.PopulationMean import mean
 import statistics
 import random
 
@@ -13,7 +13,7 @@ import random
 def sampst_dev(lst):
     ss = random.randint(1,len(lst))
     new_values = getSample(lst, ss)
-    new_mean = newmean(new_values)
+    new_mean = mean(new_values)
     total = 0
     for row in new_values:
         error = subtraction(row, new_mean)
