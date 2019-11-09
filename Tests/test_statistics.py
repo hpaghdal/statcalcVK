@@ -101,11 +101,14 @@ class MyTestCase(unittest.TestCase):
 
     def test_proportion_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        answer = CsvReader('Tests/Data/StatAnswers.csv').data
         lst = []
         for row in test_data:
             y = int(row['Value 1'])
             lst.append(y)
-        self.assertEqual(self.statistics.proportion(lst), 0.795)
+        for column in answer:
+            result = float((column['proportion']))
+        self.assertEqual(self.statistics.proportion(lst), result)
 
 
 if __name__ == '__main__':
