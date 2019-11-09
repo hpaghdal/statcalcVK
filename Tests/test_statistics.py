@@ -2,6 +2,7 @@ import unittest
 from Statistics.Statistics import Statistics
 from Calculator.Calculator import Calculator
 from CsvReader.CsvReader import CsvReader
+from pprint import pprint
 
 
 class MyTestCase(unittest.TestCase):
@@ -14,7 +15,6 @@ class MyTestCase(unittest.TestCase):
     def test_decorator_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
 
-
     def test_Population_Mean_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
         answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
@@ -26,13 +26,13 @@ class MyTestCase(unittest.TestCase):
         # result = float((column['mean']))
         self.assertEqual(self.statistics.newmean(lst), 72.94494494494495)
 
-
     def test_Sample_Mean_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
         lst = []
         for row in test_data:
             y = int(row['Value 1'])
             lst.append(y)
+        #pprint(test_data)
         x, z = self.statistics.sammean(lst)
 
         self.assertEqual(x, z)
