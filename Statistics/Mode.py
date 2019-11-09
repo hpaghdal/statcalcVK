@@ -1,4 +1,8 @@
+import statistics
+
+
 def mode(lst):
+    lst.sort()
     if lst == []:
         return None
     else:
