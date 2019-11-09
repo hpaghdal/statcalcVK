@@ -4,8 +4,6 @@ from Calculator.Division import division
 
 
 def proportion(lst):
-    # Any number 20% above or 20% below the mean is being considered as outlier.
-    # This function returns the proportion of the population which is outlier.
     m = mean(lst)
     lower_limit = multiplication(0.8, m)
     higher_limit = multiplication(1.2, m)
