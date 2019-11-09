@@ -7,7 +7,7 @@ from pprint import pprint
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.statistics = Statistics('Tests/Data/UnitTestStats.csv')
+        self.statistics = Statistics('Tests/Data/StatCalcData.csv')
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
@@ -17,14 +17,14 @@ class MyTestCase(unittest.TestCase):
 
     def test_Population_Mean_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
-        answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
+        answer = CsvReader('Tests/Data/StatAnswers.csv').data
         lst = []
         for row in test_data:
             y = int(row['Value 1'])
             lst.append(y)
-        # for column in answer:
-        # result = float((column['mean']))
-        self.assertEqual(self.statistics.newmean(lst), 72.94494494494495)
+        for column in answer:
+            result = float((column['mean']))
+        self.assertEqual(self.statistics.newmean(lst), result)
 
     def test_Sample_Mean_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
@@ -38,33 +38,38 @@ class MyTestCase(unittest.TestCase):
 
     def test_Median_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
-        #answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
+        answer = CsvReader('Tests/Data/StatAnswers.csv').data
         lst = []
         for row in test_data:
             y = int(row['Value 1'])
             lst.append(y)
-        self.assertEqual(self.statistics.med(lst), 70)
+        for column in answer:
+            result = float((column['median']))
+        self.assertEqual(self.statistics.med(lst), result)
 
     def test_Mode_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
-        #answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
+        answer = CsvReader('Tests/Data/StatAnswers.csv').data
         lst = []
         for row in test_data:
             y = int(row['Value 1'])
             lst.append(y)
-        self.assertEqual(self.statistics.mod(lst), 70)
+        for column in answer:
+            result = float((column['mode']))
+        self.assertEqual(self.statistics.mod(lst), result)
 
     def test_Population_Standard_Deviation_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
-        #answer = CsvReader('Tests/Data/UnitTestStatsAnswers.csv').data
+        answer = CsvReader('Tests/Data/StatAnswers.csv').data
         lst = []
         for row in test_data:
             y = int(row['Value 1'])
             lst.append(y)
-        self.assertEqual(self.statistics.stddev(lst), 73.00893494041833)
+        for column in answer:
+            result = float((column['stdev']))
+        self.assertEqual(self.statistics.stddev(lst), result)
 
     def test_Sample_Standard_Deviation_calculator(self):
-
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
         lst = []
         for row in test_data:
@@ -83,7 +88,7 @@ class MyTestCase(unittest.TestCase):
             y = int(row['Value 1'])
             lst.append(y)
         conf = 95
-        self.assertEqual(self.statistics.confintv(lst, conf), (77.47, 68.42))
+        self.assertEqual(self.statistics.confintv(lst, conf), (132.67, 121.07))
 
     def test_zscore_calculator(self):
         data = [1, 2, 3, 4, 5]
@@ -96,7 +101,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_proportion_calculator(self):
         data = [1, 2, 3, 4, 5, 6]
-        self.assertEqual(self.statistics.med(data), 3.5)
+        self.assertEqual(self.statistics.proportion(data), 0.6666667)
 
 
 if __name__ == '__main__':
