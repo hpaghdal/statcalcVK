@@ -10,13 +10,14 @@ from Statistics.SampleStandardDeviation import sampst_dev
 from Statistics.SampleMean import samp_mean
 from CsvReader.CsvReader import CsvReader
 from Statistics.Proportion import proportion
+from Statistics.vPopProportion import v_pop_proportion
 
 
 class Statistics(Calculator):
     data = []
 
     def __init__(self, filepath):
-        self.data = CsvReader('Tests/Data/UnitTestStats.csv').data
+        self.data = CsvReader('Tests/Data/StatCalcData.csv').data
         super().__init__()
 
     def newmean(self, a):
@@ -57,4 +58,8 @@ class Statistics(Calculator):
 
     def proportion(self, a):
         self.result = proportion(a)
+        return self.result
+
+    def vpop_proportion(self, a):
+        self.result = v_pop_proportion(a)
         return self.result
