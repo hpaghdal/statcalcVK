@@ -26,6 +26,7 @@ class MyTestCase(unittest.TestCase):
         data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         self.assertEqual(self.statistics.sammean(data), 3)
 
+
     def test_median_calculator(self):
         ##test_data = CsvReader('/Tests/Data/Addition.csv').data
         ##for row in test_data:
@@ -81,6 +82,10 @@ class MyTestCase(unittest.TestCase):
         # for column in answer:
         # result = float((column['mean']))
         self.assertEqual(self.statistics.newmean(lst), 72.94494494494495)
+
+    def test_proportion_calculator(self):
+        data = [1, 2, 3, 4, 5, 6]
+        self.assertEqual(self.statistics.med(data), 3.5)
 
 
 if __name__ == '__main__':
