@@ -77,9 +77,13 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(x, z)
 
     def test_confidence_interval_calculator(self):
-        data = [1, 2, 3, 4, 5]
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
         conf = 95
-        self.assertEqual(self.statistics.confintv(data, conf), (4.39, 1.61))
+        self.assertEqual(self.statistics.confintv(lst, conf), (77.47, 68.42))
 
     def test_zscore_calculator(self):
         data = [1, 2, 3, 4, 5]
