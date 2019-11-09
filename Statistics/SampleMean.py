@@ -1,20 +1,12 @@
-from Statistics.PopulationMean import mean
+from Statistics.MeanTest import newmean
 from Statistics.SampleGenerator import getSample
-from Calculator.Addition import addition
-from Calculator.Division import division
 
+import random
+import statistics
 
 def samp_mean(lst):
-    new_list = []
-    for x in range(5):
-        new_list = lst[0:5]
-    new_mean = mean(new_list)
-    return new_mean
-
-
-#def sammean(data, sample_size):
- #   total = 0
-  #  sample = getSample(data, sample_size)
-   ##for num in sample:
-     #   total = addition(total, num)
-    #return division(total, num_values)
+    ss = random.randint(1,len(lst))
+    new_values = getSample(lst, ss)
+    new_mean = newmean(new_values)
+    actual_mean = statistics.mean(new_values) #to compare calculated result
+    return new_mean, actual_mean
