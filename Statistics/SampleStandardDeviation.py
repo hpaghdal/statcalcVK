@@ -6,8 +6,9 @@ from Calculator.Square import square
 from Calculator.Sqrt import root
 from Statistics.SampleGenerator import getSample
 from Statistics.MeanTest import newmean
-import statistics
 
+
+# import statistics
 
 
 def sampst_dev(lst):
@@ -20,9 +21,7 @@ def sampst_dev(lst):
         error_sq = square(error)
         total = addition(total, error_sq)
     i = len(new_values)
-    b = division(subtraction(1,i), total)
-    std = math.sqrt(b)  #works
-    #std = root(b)      #Doesn't work
+    b = division(subtraction(1, i), total)
+    std = math.sqrt(b)  # works
+    # std = root(b)      #Doesn't work
     return std, new_values
-
-
