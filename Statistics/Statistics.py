@@ -11,6 +11,7 @@ from Statistics.SampleMean import samp_mean
 from CsvReader.CsvReader import CsvReader
 from Statistics.MeanTest import newmean
 
+
 class Statistics(Calculator):
     data = []
 
@@ -18,11 +19,9 @@ class Statistics(Calculator):
         self.data = CsvReader('Tests/Data/UnitTestStats.csv').data
         super().__init__()
 
-
     def newmean(self, a):
         self.result = newmean(a)
         return self.result
-
 
     def popmean(self, a):
         self.result = mean(a)
