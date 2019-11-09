@@ -1,11 +1,17 @@
 import math
-import statistics
+from Calculator.Addition import addition
+from Calculator.Subtraction import subtraction
+from Calculator.Division import division
+from Calculator.Square import square
 from Statistics.PopulationMean import mean
+from Calculator.Sqrt import root
 
 
 def st_dev(lst):
     diffs = 0
     m = mean(lst)
     for l in lst:
-        diffs += (l - m) ** 2
-    return (diffs / (len(lst) - 1)) ** 0.5
+        diffs = addition(diffs,square(subtraction(l, m)))
+        sd = division(diffs, subtraction(1,len(lst)))
+        x = root(sd)
+    return x
