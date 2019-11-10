@@ -91,9 +91,15 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.confintv(lst, conf), (132.67, 121.07))
 
     def test_zscore_calculator(self):
-        data = [1, 2, 3, 4, 5]
-        x = round(-1.2649110640673518, 7)
-        self.assertEqual(self.statistics.z_score(data), x)
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        answer = CsvReader('Tests/Data/StatAnswers.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        for column in answer:
+            result = float((column['zscore']))
+        self.assertEqual(self.statistics.z_score(lst), result)
 
     def test_population_variance_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
