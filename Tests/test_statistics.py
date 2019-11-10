@@ -96,8 +96,15 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.z_score(data), x)
 
     def test_population_variance_calculator(self):
-        data = [1, 2, 3, 4, 5]
-        self.assertEqual(self.statistics.pvariance(data), 2.499999999733769)
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        answer = CsvReader('Tests/Data/StatAnswers.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        for column in answer:
+            result = float((column['pop_variance']))
+        self.assertEqual(self.statistics.pvariance(lst), result)
 
     def test_proportion_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
