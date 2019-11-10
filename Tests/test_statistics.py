@@ -143,5 +143,10 @@ class MyTestCase(unittest.TestCase):
         x = self.statistics.vsamp_proportion(lst)
         self.assertEqual(x, x)
 
+    def test_corr(self):
+        x = self.statistics.corcof()
+        self.assertEqual(x, 25)
+
+
 if __name__ == '__main__':
     unittest.main()

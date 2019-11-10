@@ -12,6 +12,8 @@ from CsvReader.CsvReader import CsvReader
 from Statistics.Proportion import proportion
 from Statistics.vPopProportion import v_pop_proportion
 from Statistics.vSampProportion import v_samp_proportion
+from Statistics.CorrelationCoefficient import Pop_correlation_coefficient
+
 
 class Statistics(Calculator):
     data = []
@@ -67,3 +69,6 @@ class Statistics(Calculator):
     def vsamp_proportion(self, a):
         self.result = v_samp_proportion(a)
         return self.result
+
+    def corcof(self):
+        return Pop_correlation_coefficient()
