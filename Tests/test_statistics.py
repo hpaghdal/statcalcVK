@@ -117,6 +117,16 @@ class MyTestCase(unittest.TestCase):
             result = float((column['proportion']))
         self.assertEqual(self.statistics.proportion(lst), result)
 
+    def test_variance_population_proportion_calculator(self):
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        answer = CsvReader('Tests/Data/StatAnswers.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        for column in answer:
+            result = float((column['var_pop_prop']))
+        self.assertEqual(self.statistics.vpop_proportion(lst), result)
 
 if __name__ == '__main__':
     unittest.main()
