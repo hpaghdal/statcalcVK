@@ -1,4 +1,3 @@
-import math
 from Calculator.Addition import addition
 from Calculator.Division import division
 from Calculator.Subtraction import subtraction
@@ -20,10 +19,9 @@ def sampst_dev(lst):
         error_sq = square(error)
         total = addition(total, error_sq)
     i = len(new_values)
-    b = division(total, subtraction(1,i))
-    std = math.sqrt(b)  #works
-    #std = root(b)      
-    actual_sd = statistics.stdev(new_values) #Calculated using stat library to compare
+    b = division(total, subtraction(1, i))
+    std = root(b)
+    actual_sd = statistics.stdev(new_values)  #Calculated using stat library to compare
     return std, actual_sd
 
 

@@ -8,4 +8,3 @@ def mean(lst):
 #Proportion
 #Variance of sample proportion
 
-#population proportion = https://www.statisticshowto.datasciencecentral.com/population-proportion/
