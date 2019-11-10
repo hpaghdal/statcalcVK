@@ -147,6 +147,10 @@ class MyTestCase(unittest.TestCase):
         x = self.statistics.corcof()
         self.assertEqual(x, 25)
 
+    #def test_pvalue(self):
+     #   x = self.statistics.p_value()
+      #  self.assertEqual(x, 25)
+
 
 if __name__ == '__main__':
     unittest.main()
