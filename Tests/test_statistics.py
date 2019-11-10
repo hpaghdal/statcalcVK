@@ -134,5 +134,14 @@ class MyTestCase(unittest.TestCase):
             result = float((column['var_pop_prop']))
         self.assertEqual(self.statistics.vpop_proportion(lst), result)
 
+    def test_variance_sample_proportion_calculator(self):
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        x = self.statistics.vsamp_proportion(lst)
+        self.assertEqual(x, x)
+
 if __name__ == '__main__':
     unittest.main()
