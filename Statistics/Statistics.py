@@ -71,8 +71,8 @@ class Statistics(Calculator):
         self.result = v_samp_proportion(a)
         return self.result
 
-    def corcof(self):
-        return Pop_correlation_coefficient()
+    def corcof(self, a):
+        return Pop_correlation_coefficient(a)
 
     def p_value(self):
         return pvalue()

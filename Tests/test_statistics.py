@@ -143,9 +143,14 @@ class MyTestCase(unittest.TestCase):
         x = self.statistics.vsamp_proportion(lst)
         self.assertEqual(x, x)
 
-    #def test_corr(self):
-     #   x = self.statistics.corcof()
-      #  self.assertEqual(x, 25)
+    def test_corr(self):
+        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
+        lst = []
+        for row in test_data:
+            y = int(row['Value 1'])
+            lst.append(y)
+        x = self.statistics.corcof(lst)
+        self.assertEqual(x, 25)
 
     #def test_pvalue(self):
      #   x = self.statistics.p_value()
