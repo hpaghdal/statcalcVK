@@ -4,10 +4,13 @@ from Calculator.Multiplication import multiplication
 from Calculator.Subtraction import subtraction
 from Calculator.Division import division
 from Statistics.SampleGenerator import getSample
+#import numpy
+
 
 def Pop_correlation_coefficient(lst):
     x_data = getSample(lst, 20)
     y_data = getSample(lst, 20)
+    #act_result = numpy.corrcoef(x_data, y_data)[0, 1]
     #x_data = [1, 25, 34, 4, 51]
     #y_data = [6, 7, 8, 9, 10]
     x_mean = mean(x_data)
@@ -35,9 +38,9 @@ def Pop_correlation_coefficient(lst):
         ab = a[i] * b[i]
         tot_sum = tot_sum + ab
     #tot_sum = sum(ab)
-    result = tot_sum / 4
+    cal_result = tot_sum / 4
 
-    return result
+    return cal_result
 
 # covriance = cov(X, Y) = (sum (x - mean(X)) * (y - mean(Y)) ) * 1/(n-1)
 # covariance(X, Y) / (stdv(X) * stdv(Y))
