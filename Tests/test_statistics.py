@@ -21,8 +21,7 @@ class MyTestCase(unittest.TestCase):
         answer = CsvReader('Tests/Data/StatAnswers.csv').data
         lst = data_add(test_data)
         for column in answer:
-            result = float((column['mean']))
-        self.assertEqual(self.statistics.newmean(lst), result)
+            self.assertEqual(self.statistics.newmean(lst), float((column['mean'])))
 
 
     def test_Sample_Mean_calculator(self):
