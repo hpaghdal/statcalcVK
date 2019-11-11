@@ -3,7 +3,6 @@ from Statistics.StandardDeviation import st_dev
 from Calculator.Multiplication import multiplication
 from Calculator.Subtraction import subtraction
 from Calculator.Division import division
-from Statistics.SampleMean import samp_mean
 
 
 def Pop_correlation_coefficient():
@@ -25,7 +24,6 @@ def Pop_correlation_coefficient():
         zx = division(new1, x)
         a.append(zx)
 
-        # (zx)i = (xi – x̄) / s x
     for i in y_data:
         new2 = subtraction(y_mean, i)
         zy = division(new2, y)
@@ -33,7 +31,7 @@ def Pop_correlation_coefficient():
 
     for i in range(len(x_data)):
         ab = a[i] * b[i]
-        
+
     tot_sum = sum(ab)
     result = tot_sum / 4
 
