@@ -88,29 +88,19 @@ class MyTestCase(unittest.TestCase):
     def test_variance_population_proportion_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
         answer = CsvReader('Tests/Data/StatAnswers.csv').data
-        lst = []
-        for row in test_data:
-            y = int(row['Value 1'])
-            lst.append(y)
+        lst = data_add(test_data)
         for column in answer:
-            result = float((column['var_pop_prop']))
-        self.assertEqual(self.statistics.vpop_proportion(lst), result)
+            self.assertEqual(self.statistics.vpop_proportion(lst), float((column['var_pop_prop'])))
 
     def test_variance_sample_proportion_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
-        lst = []
-        for row in test_data:
-            y = int(row['Value 1'])
-            lst.append(y)
+        lst = data_add(test_data)
         x = self.statistics.vsamp_proportion(lst)
         self.assertEqual(x, x)
 
     def test_corr(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
-        lst = []
-        for row in test_data:
-            y = int(row['Value 1'])
-            lst.append(y)
+        lst = data_add(test_data)
         x = self.statistics.corcof(lst)
         self.assertEqual(x, x)
 
