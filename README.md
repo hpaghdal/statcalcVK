@@ -11,20 +11,20 @@
   The [References](https://github.com/enforcer20/statcalcVK/tree/master/References) folder will direct you to a list of terms for the descriptions of these statistical math calculations.
    
    ## Statistical Math Calculations
-   1. [Population Mean](https://github.com/Karan/statcalcVK/blob/master/Statistics/PopulationMean.py)
-   2. [Median](https://github.com/Karan/statcalcVK/blob/master/Statistics/Median.py)
-   3. [Mode](https://github.com/Karan/statcalcVK/blob/master/Statistics/Mode.py)
-   4. [Population Standard Deviation](https://github.com/Karan/statcalcVK/blob/master/Statistics/StandardDeviation.py)
-   5. [Variance of population proportion](https://github.com/Karan/statcalcVK/blob/master/Statistics/vPopProportion.py)
-   6. [Z-Score](https://github.com/Karan/statcalcVK/blob/master/Statistics/Zscore.py)
-   7. [Population Correlation Coefficient](https://github.com/Karan/statcalcVK/blob/master/Statistics/CorrelationCoefficient.py)
-   8. [Confidence Interval](https://github.com/Karan/statcalcVK/blob/master/Statistics/ConfidenceInterval.py)
-   9. [Population Variance](https://github.com/Karan/statcalcVK/blob/master/Statistics/PopulationVariance.py)
-   10. [P Value](https://github.com/Karan/statcalcVK/blob/master/Statistics/PValue.py)
-   11. [Proportion](https://github.com/Karan/statcalcVK/blob/master/Statistics/Proportion.py)
-   12. [Sample Mean](https://github.com/Karan/statcalcVK/blob/master/Statistics/SampleMean.py)
-   13. [Sample Standard Deviation](https://github.com/Karan/statcalcVK/blob/master/Statistics/SampleStandardDeviation.py)
-   14. [Variance of sample proportion](https://github.com/Karan/statcalcVK/blob/master/Statistics/vSampProportion.py)
+   1. [Population Mean](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/PopulationMean.py)
+   2. [Median](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/Median.py)
+   3. [Mode](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/Mode.py)
+   4. [Population Standard Deviation](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/StandardDeviation.py)
+   5. [Variance of population proportion](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/vPopProportion.py)
+   6. [Z-Score](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/Zscore.py)
+   7. [Population Correlation Coefficient](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/CorrelationCoefficient.py)
+   8. [Confidence Interval](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/ConfidenceInterval.py)
+   9. [Population Variance](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/PopulationVariance.py)
+   10. [P Value](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/PValue.py)
+   11. [Proportion](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/Proportion.py)
+   12. [Sample Mean](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/SampleMean.py)
+   13. [Sample Standard Deviation](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/SampleStandardDeviation.py)
+   14. [Variance of sample proportion](https://github.com/enforcer20/statcalcVK/blob/master/Statistics/vSampProportion.py)
   
   The above statistical formulas use both built-in functions and CSV data sheets to test the functionality of the calculator.
   
