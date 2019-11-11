@@ -4,15 +4,13 @@ from Calculator.Multiplication import multiplication
 from Calculator.Subtraction import subtraction
 from Calculator.Division import division
 from Statistics.SampleGenerator import getSample
+from CsvReader.CsvReader import CsvReader
 #import numpy
 
 
-def Pop_correlation_coefficient(lst):
-    x_data = getSample(lst, 20)
-    y_data = getSample(lst, 20)
-    #act_result = numpy.corrcoef(x_data, y_data)[0, 1]
-    #x_data = [1, 25, 34, 4, 51]
-    #y_data = [6, 7, 8, 9, 10]
+def Pop_correlation_coefficient(x_data,y_data):
+
+
     x_mean = mean(x_data)
     y_mean = mean(y_data)
     a = []
@@ -22,7 +20,7 @@ def Pop_correlation_coefficient(lst):
     x = st_dev(x_data)
     y = st_dev(y_data)
     divisor = multiplication(x, y)
-    z = len(lst)
+    #z = len(x_data)
 
     for i in x_data:
         new1 = subtraction(x_mean, i)
@@ -37,7 +35,7 @@ def Pop_correlation_coefficient(lst):
     for i in range(len(x_data)):
         ab = a[i] * b[i]
         tot_sum = tot_sum + ab
-    #tot_sum = sum(ab)
+
     cal_result = tot_sum / 4
 
     return cal_result

@@ -99,14 +99,30 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(x, x)
 
     def test_corr(self):
-        test_data = CsvReader('Tests/Data/StatCalcData.csv').data
-        lst = data_add(test_data)
-        x = self.statistics.corcof(lst)
-        self.assertEqual(x, x)
+        test_data = CsvReader('Tests/Data/SampleData.csv').data
+        answer = CsvReader('Tests/Data/StatAnswers.csv').data
+        x_data = []
+        y_data = []
+        for row in test_data:
+            x = int(row['x'])
+            x_data.append(x)
+            y = int(row['y'])
+            y_data.append(y)
+        z = self.statistics.corcof(x_data, y_data)
+        for column in answer:
+            self.assertEqual(z, float((column['corr_coff'])))
 
-    # def test_pvalue(self):
-    #   x = self.statistics.p_value()
-    #  self.assertEqual(x, 25)
+    def test_pvalue(self):
+        test_data = CsvReader('Tests/Data/Ztable.csv').data
+        z_data = []
+        p_data = []
+        for row in test_data:
+            x = float(row['z_score'])
+            z_data.append(x)
+            y = float(row['p_value'])
+            p_data.append(y)
+        x = self.statistics.p_value(z_data,p_data)
+        self.assertEqual(x, 0.042716221)
 
 
 if __name__ == '__main__':
