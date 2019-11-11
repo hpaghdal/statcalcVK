@@ -13,5 +13,4 @@ class CsvReader:
             csv_data = csv.DictReader(text_data, delimiter=',')
             for row in csv_data:
                 self.data.append(row)
-
         pass
