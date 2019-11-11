@@ -74,5 +74,5 @@ class Statistics(Calculator):
     def corcof(self,a,b):
         return Pop_correlation_coefficient(a,b)
 
-    def p_value(self):
-        return pvalue()
+    def p_value(self,a,b):
+        return pvalue(a,b)
