@@ -31,8 +31,9 @@ def Pop_correlation_coefficient():
         zy = division(new2, y)
         b.append(zy)
 
-    ab = [a[i] * b[i] for i in range(len(x_data))]
-
+    for i in range(len(x_data)):
+        ab = a[i] * b[i]
+        
     tot_sum = sum(ab)
     result = tot_sum / 4
 
