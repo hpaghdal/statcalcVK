@@ -20,7 +20,6 @@ def Pop_correlation_coefficient(x_data,y_data):
     x = st_dev(x_data)
     y = st_dev(y_data)
     divisor = multiplication(x, y)
-    #z = len(x_data)
 
     for i in x_data:
         new1 = subtraction(x_mean, i)
@@ -40,5 +39,3 @@ def Pop_correlation_coefficient(x_data,y_data):
 
     return cal_result
 
-# covriance = cov(X, Y) = (sum (x - mean(X)) * (y - mean(Y)) ) * 1/(n-1)
-# covariance(X, Y) / (stdv(X) * stdv(Y))
