@@ -36,8 +36,8 @@ class MyTestCase(unittest.TestCase):
         answer = CsvReader('Tests/Data/StatAnswers.csv').data
         lst = data_add(test_data)
         for column in answer:
-            result = float((column['median']))
-        self.assertEqual(self.statistics.med(lst), result)
+            self.assertEqual(self.statistics.med(lst), float((column['median'])))
+
 
     def test_Mode_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
