@@ -26,21 +26,15 @@ class MyTestCase(unittest.TestCase):
 
     def test_Sample_Mean_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
-        lst = []
-        for row in test_data:
-            y = int(row['Value 1'])
-            lst.append(y)
+        lst = data_add(test_data)
         x, z = self.statistics.sammean(lst)
-
         self.assertEqual(x, z)
+
 
     def test_Median_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
         answer = CsvReader('Tests/Data/StatAnswers.csv').data
-        lst = []
-        for row in test_data:
-            y = int(row['Value 1'])
-            lst.append(y)
+        lst = data_add(test_data)
         for column in answer:
             result = float((column['median']))
         self.assertEqual(self.statistics.med(lst), result)
