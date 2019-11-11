@@ -5,6 +5,10 @@
    ## Group Member Names
   1. Karan Walanj
   2. Vishwanath Ezhil
+  
+  ## Statistical Terms
+  
+  The [References](https://github.com/enforcer20/statcalcVK/tree/master/References) folder will direct you to a list of terms for the descriptions of these statistical math calculations.
    
    ## Statistical Math Calculations
    1. [Population Mean](https://github.com/Karan/statcalcVK/blob/master/Statistics/PopulationMean.py)
