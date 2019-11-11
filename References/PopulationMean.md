@@ -5,11 +5,11 @@ Population mean is basically the average of an entire group. It is derived by ca
 
 The below formula explains each element utilized.
 
-μ = (Σ * X)/ N
-where:
-Σ means “the sum of.”
-X = all the individual items in the group.
-N = the number of items in the group.
+    μ = (Σ * X)/ N
+    where:
+    Σ means “the sum of.”
+    X = all the individual items in the group.
+    N = the number of items in the group.
 
 ### Utilization of Mean in our Code
 We used a randomly generated distribution of 600 values. We calculated the mean by adding all values and dividing it by 600. It was one of the simplest statistical calculation. 
