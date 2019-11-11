@@ -13,6 +13,7 @@ from Statistics.Proportion import proportion
 from Statistics.vPopProportion import v_pop_proportion
 from Statistics.vSampProportion import v_samp_proportion
 from Statistics.CorrelationCoefficient import Pop_correlation_coefficient
+from Statistics.PValue import pvalue
 
 
 class Statistics(Calculator):
@@ -72,3 +73,6 @@ class Statistics(Calculator):
 
     def corcof(self):
         return Pop_correlation_coefficient()
+
+    def p_value(self):
+        return pvalue()
