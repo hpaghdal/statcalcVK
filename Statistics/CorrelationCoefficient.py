@@ -5,7 +5,9 @@ from Calculator.Subtraction import subtraction
 from Calculator.Division import division
 from Statistics.SampleGenerator import getSample
 from CsvReader.CsvReader import CsvReader
-#import numpy
+
+
+# import numpy
 
 
 def Pop_correlation_coefficient(x_data,y_data):
@@ -35,7 +37,6 @@ def Pop_correlation_coefficient(x_data,y_data):
         ab = a[i] * b[i]
         tot_sum = tot_sum + ab
 
-    cal_result = tot_sum / 4
+    cal_result = tot_sum / subtraction(1, len(x_data))
 
     return cal_result
-
