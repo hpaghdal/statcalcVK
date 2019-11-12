@@ -4,6 +4,7 @@ from Calculator.Calculator import Calculator
 from CsvReader.CsvReader import CsvReader
 from CsvReader.CsvDataAppend import data_add
 
+
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.statistics = Statistics('Tests/Data/StatCalcData.csv')
@@ -53,7 +54,6 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.statistics.stddev(lst), float((column['stdev'])))
             self.assertNotEqual(self.statistics.stddev(lst), float((column['stdev'])) * 3, "Wrong Pop Std Deviation")
 
-
     def test_Sample_Standard_Deviation_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
         lst = data_add(test_data)
@@ -62,7 +62,6 @@ class MyTestCase(unittest.TestCase):
         z = round(z, 3)
         self.assertEqual(x, z)
         self.assertNotEqual(x, z * 2, "Sample Std Deviation is incorrect")
-
 
     def test_confidence_interval_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
@@ -78,7 +77,6 @@ class MyTestCase(unittest.TestCase):
         for column in answer:
             self.assertEqual(self.statistics.z_score(lst), float((column['zscore'])))
             self.assertNotEqual(self.statistics.z_score(lst), float((column['zscore'])) * 2, "Incorrect Z Score")
-
 
     def test_population_variance_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
@@ -96,14 +94,14 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.statistics.proportion(lst), float((column['proportion'])))
             self.assertNotEqual(self.statistics.proportion(lst), float((column['proportion'])) - 2, "Wrong Proportion")
 
-
     def test_variance_population_proportion_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
         answer = CsvReader('Tests/Data/StatAnswers.csv').data
         lst = data_add(test_data)
         for column in answer:
             self.assertEqual(self.statistics.vpop_proportion(lst), float((column['var_pop_prop'])))
-            self.assertNotEqual(self.statistics.vpop_proportion(lst), float((column['var_pop_prop'])) - 2, "WrongResult")
+            self.assertNotEqual(self.statistics.vpop_proportion(lst), float((column['var_pop_prop'])) - 2,
+                                "WrongResult")
 
     def test_variance_sample_proportion_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
