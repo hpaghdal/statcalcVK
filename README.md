@@ -37,7 +37,7 @@
  
    ## Changelog
 
-|Hash|User      |Date|Change   
+|Hash|         User      |Date                                       |Change   
 |-------|-----------|--------------------------------------------|---------------------------------------------------------------------------------------------|
 |d726a40|Karan      |2019-11-12                                  |Merge pull request #21 from vishwa742/master                                                 |
 |3058ac0|vishwanath7|2019-11-11                                  |Task: Added reference file for Variance of Sample Proportion                                 |
