@@ -3,8 +3,6 @@ from Statistics.Statistics import Statistics
 from Calculator.Calculator import Calculator
 from CsvReader.CsvReader import CsvReader
 from CsvReader.CsvDataAppend import data_add
-from pprint import pprint
-
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
