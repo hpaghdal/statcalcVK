@@ -7,12 +7,7 @@ from Statistics.SampleGenerator import getSample
 from CsvReader.CsvReader import CsvReader
 
 
-# import numpy
-
-
 def Pop_correlation_coefficient(x_data,y_data):
-
-
     x_mean = mean(x_data)
     y_mean = mean(y_data)
     a = []
