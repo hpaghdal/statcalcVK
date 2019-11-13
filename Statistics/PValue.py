@@ -1,5 +1,5 @@
 def pvalue(z_data,p_data):
-    score = -1.73
+    score = -1.52
     i = 0
     for var in z_data:
         i += 1

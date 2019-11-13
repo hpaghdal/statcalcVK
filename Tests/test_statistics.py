@@ -1,6 +1,5 @@
 import unittest
 from Statistics.Statistics import Statistics
-from Calculator.Calculator import Calculator
 from CsvReader.CsvReader import CsvReader
 from CsvReader.CsvDataAppend import data_add
 
@@ -10,9 +9,6 @@ class MyTestCase(unittest.TestCase):
         self.statistics = Statistics('Tests/Data/StatCalcData.csv')
 
     def test_instantiate_calculator(self):
-        self.assertIsInstance(self.statistics, Statistics)
-
-    def test_decorator_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
 
     def test_Population_Mean_calculator(self):
