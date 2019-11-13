@@ -1,5 +1,3 @@
-from Statistics.PopulationMean import mean
-from Calculator.Multiplication import multiplication
 from Calculator.Division import division
 from Calculator.Addition import addition
 

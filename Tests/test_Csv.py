@@ -15,7 +15,7 @@ class MyTestCase(unittest.TestCase):
             i = i + 1
             y = int(row['Value 1'])
             lst.append(y)
-        self.assertEqual(i, 600)
+        self.assertEqual(i, 600)  # To check if the csv reader reads all 600 lines of data
 
 
 if __name__ == '__main__':

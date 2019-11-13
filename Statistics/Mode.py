@@ -1,6 +1,3 @@
-import statistics
-
-
 def mode(lst):
     lst.sort()
     if lst == []:
