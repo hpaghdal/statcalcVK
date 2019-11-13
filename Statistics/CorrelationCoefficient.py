@@ -3,8 +3,6 @@ from Statistics.StandardDeviation import st_dev
 from Calculator.Multiplication import multiplication
 from Calculator.Subtraction import subtraction
 from Calculator.Division import division
-from Statistics.SampleGenerator import getSample
-from CsvReader.CsvReader import CsvReader
 
 
 def Pop_correlation_coefficient(x_data,y_data):
@@ -12,11 +10,9 @@ def Pop_correlation_coefficient(x_data,y_data):
     y_mean = mean(y_data)
     a = []
     b = []
-    ab = []
     tot_sum = 0
     x = st_dev(x_data)
     y = st_dev(y_data)
-    divisor = multiplication(x, y)
 
     for i in x_data:
         new1 = subtraction(x_mean, i)
