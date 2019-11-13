@@ -3,6 +3,7 @@ from Statistics.StandardDeviation import st_dev
 from Calculator.Multiplication import multiplication
 from Calculator.Subtraction import subtraction
 from Calculator.Division import division
+from Calculator.Addition import addition
 
 
 def Pop_correlation_coefficient(x_data,y_data):
@@ -25,9 +26,9 @@ def Pop_correlation_coefficient(x_data,y_data):
         b.append(zy)
 
     for i in range(len(x_data)):
-        ab = a[i] * b[i]
-        tot_sum = tot_sum + ab
+        ab = multiplication(a[i], b[i])
+        tot_sum = addition(tot_sum, ab)
 
-    cal_result = tot_sum / subtraction(1, len(x_data))
+    cal_result = division(tot_sum, subtraction(1, len(x_data)))
 
     return cal_result
