@@ -3,8 +3,8 @@
 # Statistical Calculator
  
    ## Group Member Names
-  1. Karan Walanj
-  2. Vishwanath Ezhil
+  1. Karan Walanj - enforcer20
+  2. Vishwanath Ezhil - vishwa742
   
   ## Mini Project #1 Terms
   
