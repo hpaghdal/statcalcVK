@@ -12,9 +12,6 @@ class MyTestCase(unittest.TestCase):
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
 
-    def test_decorator_calculator(self):
-        self.assertIsInstance(self.statistics, Statistics)
-
     def test_Population_Mean_calculator(self):
         test_data = CsvReader('Tests/Data/StatCalcData.csv').data
         answer = CsvReader('Tests/Data/StatAnswers.csv').data
