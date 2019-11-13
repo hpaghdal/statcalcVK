@@ -1,6 +1,5 @@
 from Statistics.PopulationMean import mean
 from Statistics.SampleGenerator import getSample
-
 import random
 import statistics
 
