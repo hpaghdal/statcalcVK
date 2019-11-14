@@ -6,9 +6,10 @@
   1. Karan Walanj - enforcer20
   2. Vishwanath Ezhil - vishwa742
   
+  
   ## Mini Project #1 Terms
   
-  Please click [here](https://github.com/enforcer20/KVKRepo/tree/master/Python%20Terms) to be redirected to the Python definitions updated in Mini Project #1.
+  Please click [here](https://github.com/enforcer20/KVKRepo/tree/master/Python%20Terms) to be redirected to the Python definitions updated in [Mini Project #1](https://github.com/enforcer20/KVKRepo).
   
   ## Statistical Terms
   
